@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Http\Controllers\api\v1\User;
 
 use Illuminate\Http\Request;
@@ -22,6 +21,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response 
      */ 
     public function login(){ 
+    	/*---- Test-----*/
         if(Auth::attempt(['email' => request('email'), 'password' => request('password')])){ 
             $user = Auth::user(); 
             $success['token'] =  $user->createToken('MyApp')-> accessToken; 
