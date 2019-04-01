@@ -12,18 +12,6 @@ class CreateUsersTable extends Migration
      * @return void
      */
     public function up()
-    /*{
-        Schema::create('users', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        });
-    }*/
-
      {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
@@ -36,7 +24,7 @@ class CreateUsersTable extends Migration
             $table->string('gmail_id')->nullable();
             $table->string('fb_id')->nullable();
             $table->string('linkedin_id')->nullable();
-            $table->enum('user_type', ['customer', 'supplier', 'user']);
+            $table->enum('user_type', ['exporter', 'manufacturer']);
             $table->enum('status', ['active', 'inactive']);
             $table->rememberToken();
             $table->timestamps();

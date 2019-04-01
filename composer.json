@@ -9,8 +9,8 @@
     "license": "MIT",
     "require": {
         "php": "^7.1.3",
-        "doctrine/dbal": "^2.9",
         "fideloper/proxy": "^4.0",
+        "invinbg/laravel-upload-image": "^1.0",
         "laravel/framework": "5.8.*",
         "laravel/passport": "^7.2",
         "laravel/tinker": "^1.0"
